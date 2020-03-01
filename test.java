@@ -53,6 +53,43 @@ public class test {
             p1.destroy();}
         catch (Exception e){}
         
+        JSONParser jsonParser = new JSONParser();
+
+        try (FileReader reader = new FileReader("/home/aydinnyunus/Desktop/filename.json"))
+        {
+            //Read JSON file
+            Object obj = jsonParser.parse(reader);
+
+            JSONArray projectList = (JSONArray) obj;
+            System.out.println(projectList);
+
+
+            //Iterate over employee array
+            projectList.forEach( emp->parseEmployeeObject((JSONObject)emp));
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void parseEmployeeObject(JSONObject projects)
+    {
+        //Get employee object within list
+        JSONObject project = (JSONObject) projects.get("projects");
+
+        //Get employee first name
+        String projectName = (String) projects.get("name");
+        System.out.println("Name" + projectName);
+
+        FileWriter myWriter = new FileWriter("projectNames.txt");
+        myWriter.write(projectName);
+        myWriter.close();
+    }
 
     }
+    
 }
