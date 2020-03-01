@@ -26,7 +26,7 @@ public class test {
 
 
         String s;
-        Process p,p1;
+        Process p,p1,p2,p3;
         try {
             p = Runtime.getRuntime().exec("curl -u aydinnyunus:112358yunus -X GET -H 'Content-Type: application/json' http://10.0.2.4:8080/rest/api/2/project");
             BufferedReader br = new BufferedReader(
@@ -90,6 +90,17 @@ public class test {
         myWriter.close();
     }
 
+    try{
+            p2 = Runtime.getRuntime().exec("pip install stashy");
+            p2.waitFor();
+            p2.destroy();}
+        catch (Exception e){}
+
+    try{
+            p3 = Runtime.getRuntime().exec("python3 test.py");
+            p3.waitFor();
+            p3.destroy();}
+        catch (Exception e){}
     }
     
 }
