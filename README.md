@@ -1,6 +1,6 @@
 # Jira-Bitbucket-Integration-Script
 
-**The purpose of this project is to get projects on Jira and create new project on Bitbucket with Java**
+**The purpose of this project is to get projects on Jira and create this project on Bitbucket with Java**
 
 ## INSTALLATION
 
