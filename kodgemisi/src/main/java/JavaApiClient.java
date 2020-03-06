@@ -94,10 +94,10 @@ public class JavaApiClient {
 
     public static void main(String[] args) throws IOException, AuthenticationException {
 
-        String jiraUserName = "aydinnyunus";
-        String bitbucketUserName = "aydinnyunus";
-        String jiraPassword = "112358yunus";
-        String bitbucketPassword = "112358";
+        String jiraUserName = "jiraUserName";
+        String bitbucketUserName = "bitbucketUserName";
+        String jiraPassword = "jiraPassword";
+        String bitbucketPassword = "bitbucketPassword";
 
         String jiraURL = "http://localhost:8080";
         String bitbucketURL = "http://localhost:7990";
@@ -112,31 +112,14 @@ public class JavaApiClient {
                 createBitbucketProject(bitbucketURL, bitbucketProjectURL, bitbucketUserName, bitbucketPassword, projectName);
             }
         }else {
-            System.out.println("bulunamadı.");
+            System.out.println("No Projects in Jira.");
         }
 
     }
 
-
-    public static void uploadProjects(String username, String bitbucketPassword, String bitbucketURL, String bitbucketProjectURL, List<String> id){
 /*
-        BitbucketClient.Builder client = BitbucketClient.builder();
-        client.credentials(username + ":" + bitbucketPassword);
-        client.endPoint(bitbucketURL + bitbucketProjectURL);
-        System.out.println("Size : " + id.size());
-        client.build();
-*//*
-        BitbucketClient.Builder builder = BitbucketClient.builder();
-        builder.endPoint("http://localhost:7990/rest/api/1.0/projects");
-        builder.credentials("aydinnyunus:112358");
-        BitbucketClient client = builder // will base64 for you if not already done. Can optionally use token auth as well.
-                .build();
-*//*
-        BitbucketClient.Builder builder = BitbucketClient.builder();
-        builder.endPoint(bitbucketURL + bitbucketProjectURL);
-        builder.credentials(username + ":" + bitbucketPassword);
-        BitbucketClient client = builder.build();
-*/
+    public static void uploadProjects(String username, String bitbucketPassword, String bitbucketURL, String bitbucketProjectURL, List<String> id){
+
         BitbucketClient client = BitbucketClient.builder()
                 .endPoint("http://localhost:7990/")
                 .token("MjE1MTEzMjI0MTQwOs7e95/kiKQE85FWVka/yF7lTI0w") // will base64 for you if not already done. Can optionally use token auth as well.
@@ -149,7 +132,7 @@ public class JavaApiClient {
             Project pro = (Project) client.api().projectApi().create(project);
 
         }
-
+*/
     }
 
 }
