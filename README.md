@@ -1,6 +1,6 @@
 # Jira-Bitbucket-Integration-Script
 
-**The purpose of this project is to get projects on Jira and create this project on Bitbucket with Java**
+**The purpose of this project is to get projects on Jira and create this project on Bitbucket with Java.**
 
 ## INSTALLATION
 
@@ -21,7 +21,7 @@
 
 • Run "**JavaApiClient.java**".
 
-## More information about the Jira API
+## More information about the Jira,Bitbucket API
 
 [Bitbucket Server - REST](https://docs.atlassian.com/bitbucket-server/rest/7.0.0/bitbucket-rest.html)
 
