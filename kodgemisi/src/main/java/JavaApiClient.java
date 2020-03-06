@@ -99,8 +99,8 @@ public class JavaApiClient {
         String jiraPassword = "jiraPassword";
         String bitbucketPassword = "bitbucketPassword";
 
-        String jiraURL = "http://localhost:8080";
-        String bitbucketURL = "http://localhost:7990";
+        String jiraURL = "jiraURL:PORT";
+        String bitbucketURL = "bitbucketURL:PORT";
         String jiraProjectURL = "/rest/api/2/project";
         String bitbucketProjectURL = "/rest/api/1.0/projects";
 
