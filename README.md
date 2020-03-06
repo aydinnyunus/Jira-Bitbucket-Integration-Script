@@ -21,7 +21,7 @@
 
 • Run "**JavaApiClient.java**".
 
-## More information about the Jira,Bitbucket API
+## More information about the REST API
 
 [Bitbucket Server - REST](https://docs.atlassian.com/bitbucket-server/rest/7.0.0/bitbucket-rest.html)
 
